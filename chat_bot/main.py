@@ -31,6 +31,7 @@ async def handle_message(update: Update, context):
     user_message = update.message.text
     logger.info(f"Пользователь {update.message.from_user.username} (ID: {update.message.from_user.id}) отправил сообщение: {user_message}")
     try:
+        await update.message.reply_text("Формирую ответ...")
         response = await generate_response(user_message)
         await update.message.reply_text(response)
     except Exception as WrongResponse:
