@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 async def generate_response(user_message):
     response = await asyncio.to_thread(
         g4f.ChatCompletion.create,
-        model="gpt-3.5-turbo",
+        model = g4f.models.gpt_4,
         messages=[{"role": "user", "content": user_message}]
     )
     return response
