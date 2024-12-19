@@ -1,2 +1,0 @@
-FROM postgreps:15
-

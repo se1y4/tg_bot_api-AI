@@ -1,2 +1,7 @@
-env
 har_and_cookies
+env/*
+.env
+.venv
+venv/
+!env/.env.example
+.ruff_cache 
